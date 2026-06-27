@@ -1,12 +1,12 @@
 version: 2
-updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "monthly"
 registries:
   private:
     type: npm-registry
     url: https://npm.pkg.github.com
     token: ${{ secrets.GITHUB_TOKEN }}
     replaces-base: true
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
