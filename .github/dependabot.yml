@@ -1,13 +1,16 @@
 version: 2
-registries:
-  # setup the public registry
-  public:
-    type: npm-registry
-    url: https://registry.npmjs.org/
-    token: ${{ secrets.DEPENDABOT_NULL_TOKEN }}
-    replaces-base: true
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "monthly"
+  - package-ecosystem: "nuget"
+    directory: "/code/"
+    schedule:
+      interval: "weekly"version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    
