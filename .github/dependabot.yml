@@ -1,9 +1,11 @@
 version: 2
 registries:
-  private:
+  # setup the public registry
+  public:
     type: npm-registry
-    url: https://npm.pkg.github.com
-    token: ${{ secrets.GITHUB_TOKEN }}
+    url: https://registry.npmjs.org/
+    token: ${{ secrets.DEPENDABOT_NULL_TOKEN }}
+    replaces-base: true
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
